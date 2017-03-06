@@ -1,0 +1,13 @@
+extends ../../_layout
+
+block vars
+
+  - var description = 'Свадьба, где обыгрывается индивидуальность пары. История любви. Фамильный герб. Увлечения. Профессия.</p><p>Может быть свадьба – модератор будущего: что будет и было с молодыми. Как будет выглядеть мечта. Где будут жить, куда отправятся путешествовать. Энтертейнмент: помечтаем вместе.'
+
+  - var flower = 'Розы и прочие цветы в поддержку Вашей индивидуальности и предпочтений. Создается атмосфера и стиль семьи.';
+  - var musthave = 'Знаковые вещи, предметы и элементы по тематикам. Могут быть – коллажи.';
+
+  - var page = {title: 'Индивидуальная', url: 'style/individual', type: 'style-page', class: 'page style individual', content: {desc: description, flow: flower, must: musthave}, list: [], breadcrumbs: [{link: 'style', name: 'Стиль свадьбы'}], slider: {path: 'style/individual/individual-', qnt: 6}}
+
+block content
+  +style-page(page)

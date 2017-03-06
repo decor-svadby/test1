@@ -1,0 +1,13 @@
+extends ../../_layout
+
+block vars
+
+  - var description = 'Здесь русский дух, здесь Русью пахнет. В свадьбе обыгрываются элементы русских традиций. Народная одежда. Ярмарочное изобилие. Все яркое, сочное нарядное.</p><p>Много элементов в стиле народных промыслов: палиха, гжель, хохлома.'
+
+  - var flower = 'Розы, анемоны, маки, хризантемы, колосья, сезонные фрукты, ягоды, илекс, гиперикум, береза (ветки и кора). Полевые цветы (васильки, ромашки).';
+  - var musthave = 'Самовары, баранки, платки, лапти, ленты. Могут быть меховые шапки, кокошники, пряники, венки из цветов на голову девочкам.';
+
+  - var page = {title: 'Русский стиль', url: 'style/russian', type: 'style-page', class: 'page style russian', content: {desc: description, flow: flower, must: musthave}, list: [], breadcrumbs: [{link: 'style', name: 'Стиль свадьбы'}], slider: {path: 'style/russian/russian-', qnt: 6}}
+
+block content
+  +style-page(page)

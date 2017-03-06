@@ -1,0 +1,91 @@
+
+.header-title
+  width: 100%
+  text-align: center
+  font-size: 0.7rem
+  +menu_font
+  margin: 0.5rem 0 0.5rem
+  span
+    display: block
+
+.row.first-page-title
+  margin: 1rem auto 5rem
+  +breakpoint(max-width $break-medium)
+    margin: 1rem auto 3rem
+  +breakpoint(max-width $break-small)
+    margin: 2rem auto 2rem
+
+
+.logo-title
+  +pre(3)
+  +span(6)
+  +breakpoint(max-width $break-small)
+    +pre(0)
+    +span(12)
+
+.first-page-about
+  +span(3)
+  +breakpoint(max-width $break-small)
+    position: relative
+    font-size: 1.2rem
+  +menu_font
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  right: 0
+  padding-left: 3 rem
+  font-size: 1.5rem
+  text-decoration: underline
+  font-weight: normal
+
+.teaser-section
+  +span(3)
+  +breakpoint(max-width $break-medium)
+    +span(6)
+  +breakpoint(max-width $break-small)
+    +span(12)
+  text-align: center
+  h2
+    font-size: 1.2rem
+    font-weight: 100
+    margin-bottom: 0.2rem
+    color: $color-pink
+  .teaser-img-wrapper
+    overflow: hidden
+    margin: 1rem 2rem 2rem
+    padding-top: 0.5rem
+    border-top: 1px solid $color-pink
+    img
+      width: 100%
+  p
+    margin-top: 0.4
+    +menu_font
+    text-align: center
+    font-size: 1.2rem
+
+.nav-client
+  display: block
+  overflow: hidden
+  height: 3.5rem
+  .left, .right
+    height: inherit
+  .left
+    float: left
+  .right
+    float: right
+  .link-contact, .link-about
+    position: relative
+    top: 2.2rem
+  .link-contact
+    padding: 2rem 0 0 2.5rem
+    &:before
+      +link_ico
+      left: 0
+      background: url(/images/contact.svg) no-repeat 0 0
+  .link-about
+    padding: 2rem 2.8rem 0 0
+    &:after
+      +link_ico
+      right: 0
+      background: url(/images/about.svg) no-repeat 0 0
+

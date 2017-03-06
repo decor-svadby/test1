@@ -1,0 +1,13 @@
+extends ../../../_layout
+
+block vars
+
+  - var description = 'Увидеть Париж – и умереть. Это город  моды, романтиков и влюбленных. Если Вас соединит Париж – это будет что – то особенное.</p><p>Изысканность в стиле и декоре. Много розового. Черный в элементах и структуре. Дух моды, элегантности. Бантики, горошек. Жемчуг. Стиль Коко Шанель.'
+
+  - var flower = 'Роза, матиолла, сирень, анемоны, пионы, лилии.';
+  - var musthave = 'В деталях: жесткие лаконичные линии (часто – черные) в перемешку с нежностью и трогательностью (розовое, кремовое). Эйфелева башня. Кованные элементы. Уличные фонари.';
+
+  - var page = {title: 'Париж', url: 'style/paris', type: 'style-page', class: 'page style paris', content: {desc: description, flow: flower, must: musthave}, list: [], breadcrumbs: [{link: 'style', name: 'Стиль свадьбы'},{link: 'style/travel', name: 'Путешествия'}], slider: {path: 'style/travel/paris/paris-', qnt: 6}}
+
+block content
+  +style-page(page)

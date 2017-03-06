@@ -1,0 +1,13 @@
+extends ../../../_layout
+
+block vars
+
+  - var description = 'Смешение духа античности и морского настроения. Свадьба для Богов на Олимпе. Приближение к божественному. Пафос и торжественность. Тона: синий (много), серый, белый, голубой, золотой (много).</p><p>Обыгрываются элементы древнегреческой архитектуры: колонады, арки, амфоры. Роскошный строгий стиль без вычурности с элементами духа моря (изображения или синие тона).'
+
+  - var flower = 'Розы, орхидеи, гортензии, лавр, эвкалипт, олива.';
+  - var musthave = 'Традиционные греческие орнаменты, много золота, позолоты. Позолоченные лавровые венки.';
+
+  - var page = {title: 'Греция', url: 'style/greece', type: 'style-page', class: 'page style greece', content: {desc: description, flow: flower, must: musthave}, list: [], breadcrumbs: [{link: 'style', name: 'Стиль свадьбы'},{link: 'style/national', name: 'Национальные свадьбы'}], slider: {path: 'style/national/greece/greece-', qnt: 6}}
+
+block content
+  +style-page(page)

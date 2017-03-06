@@ -1,0 +1,113 @@
+@import lib/susy
+@import lib/breakpoint
+@import lib/modular-scale
+
+
+$color-pink: #98669B
+
+$wide-border: 2%
+
+//media
+$break-small:   767px
+$break-medium:  992px
+$break-large:  1200px
+
+
+@mixin menu_font
+  // font-family: 'PT Serif', serif
+  color: $color-pink
+  // font-weight: bold
+
+@mixin link_ico
+  content: ''
+  background-size: cover
+  display: block
+  position: absolute
+  bottom: 0
+  width: 2.5rem
+  height: 3rem
+
+@mixin page_title_ico
+  +link_ico
+  width: 6rem
+  height: 7rem
+
+@mixin page_subtitle_ico
+  +link_ico
+  width: 4.2rem
+  height: 6rem
+
+
+
+html
+  +breakpoint(max-width $break-large)
+    font-size: 90%
+  +breakpoint(max-width $break-medium)
+    font-size: 80%
+
+
+body
+  height: 100%
+  font-size: 1rem
+  line-height: 1.2
+  font-family: 'Times New Roman', Times, serif;
+  // font-family: 'PT Serif', Georgia, 'Times New Roman', Times, serif;
+  // font-family: 'Helvetica', sans-serif
+  // font-family: 'Roboto Condensed', sans-serif
+  background-color: white
+  .container
+    padding: 0 $wide-border
+
+a, p, h1, h2, h3
+  color: $color-pink
+
+.clearfix
+  clear: both
+
+.row
+  +layout(auto 12 .35 inside)
+  position: relative
+  overflow: hidden
+  z-index: 1000
+
+.btn
+  display: inline-block
+  padding: 1rem 2rem
+  color: white
+  background-color: $color-pink
+
+
+// link to font http://fonts4web.ru/Helvetica.html#test
+// @font-face
+//   font-family: "Helvetica"
+//   src: url("/static/fonts/HelveticaRegular/HelveticaRegular.eot")
+//   src: url("/static/fonts/HelveticaRegular/HelveticaRegular.eot?#iefix")format("embedded-opentype"), url("/static/fonts/HelveticaRegular/HelveticaRegular.woff") format("woff"), url("/static/fonts/HelveticaRegular/HelveticaRegular.ttf") format("truetype")
+//   font-weight: normal
+
+// @font-face
+//   font-family: "Helvetica"
+//   src: url("/static/fonts/HelveticaBold/HelveticaBold.eot")
+//   src: url("/static/fonts/HelveticaBold/HelveticaBold.eot?#iefix")format("embedded-opentype"), url("/static/fonts/HelveticaBold/HelveticaBold.woff") format("woff"), url("/static/fonts/HelveticaBold/HelveticaBold.ttf") format("truetype")
+//   font-weight: bold
+
+// @font-face
+//   font-family: "Helvetica"
+//   src: url("/static/fonts/HelveticaLight/HelveticaLight.eot")
+//   src: url("/static/fonts/HelveticaLight/HelveticaLight.eot?#iefix")format("embedded-opentype"), url("/static/fonts/HelveticaLight/HelveticaLight.woff") format("woff"), url("/static/fonts/HelveticaLight/HelveticaLight.ttf") format("truetype")
+//   font-weight: 100
+
+@mixin transition($params...)
+  -webkit-transition:  $params
+  -moz-transition:  $params
+  -ms-transition:  $params
+  -o-transition:  $params
+  transition:  $params
+
+
+@import "./partials/shadow"
+@import "./partials/global"
+@import "./partials/header"
+@import "./partials/style"
+@import "./partials/element"
+@import "./partials/color"
+@import "./partials/zone"

@@ -1,0 +1,21 @@
+
+.page.zone
+  .container
+    +breakpoint(min-width $break-small)
+      margin-top: -2rem
+  .desc
+    text-align: justify
+      +span(12)
+
+  .row .col
+    +breakpoint(max-width $break-small)
+      +span(12)
+    +breakpoint(min-width $break-small)
+      +span(6)
+    +breakpoint(min-width $break-medium)
+      +span(5)
+      +push(1)
+  p
+    line-height: 1.5
+
+

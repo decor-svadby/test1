@@ -1,0 +1,13 @@
+extends ../../_layout
+
+block vars
+
+  - var description = 'Потертый шик: очарование старины. Винтажный стиль. Состаренные элементы. Аристократический дух. Неброская красота. Достоинство. Элегантность.</p><p>В декоре - все то, что раньше стоило дорого и ценилось: бусы, жемчуг, хрусталь, кружева, подсвечники с цветами, свечи, зонтики, канделябры, сундуки.'
+
+  - var flower = 'Cадовые розы, гортензии, орхидеи, пионы, маттиола. Композиции могут быть украшены кружевами и бусами.';
+  - var musthave = 'Ришелье, хрусталь, фигурная ковка, много элементов (мини – зоны) смешение стилей.';
+
+  - var page = {title: 'Шебби-Шик', url: 'style/shebby-shik', type: 'style-page', class: 'page style shebby-shik', content: {desc: description, flow: flower, must: musthave}, list: [], breadcrumbs: [{link: 'style', name: 'Стиль свадьбы'}], slider: {path: 'style/shebby-shik/shebby-shik-', qnt: 6}}
+
+block content
+  +style-page(page)

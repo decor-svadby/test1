@@ -1,0 +1,13 @@
+extends ../../../_layout
+
+block vars
+
+  - var description = 'Солнце. Страсть. Любовь. Фламенко. Это свадьба для пылающих и горящих сердец.</p><p>Сочетание структурного черного и красного. Яркие сочные цвета.'
+
+  - var flower = 'Роза, георгины, астранция, амаранта, мандариновое дерево, эвкалипт. ';
+  - var musthave = 'Испанские кружева. Фламенко (или танцы, или в стилистике декора). Гитара. Народные узоры.';
+
+  - var page = {title: 'Мадрид', url: 'style/madrid', type: 'style-page', class: 'page style madrid', content: {desc: description, flow: flower, must: musthave}, list: [], breadcrumbs: [{link: 'style', name: 'Стиль свадьбы'},{link: 'style/travel', name: 'Путешествия'}], slider: {path: 'style/travel/madrid/madrid-', qnt: 6}}
+
+block content
+  +style-page(page)

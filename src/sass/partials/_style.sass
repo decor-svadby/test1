@@ -1,0 +1,55 @@
+
+.page.style
+  .container
+    +breakpoint(min-width $break-small)
+      margin-top: -2rem
+  h1
+    text-align: center
+    span
+      +breakpoint(min-width $break-small)
+        padding: 2.3rem 3.8rem
+        &:before
+          +page_title_ico
+          background: url('/images/style-title-left.svg') no-repeat 0 0
+          left: 0
+        &:after
+          +page_title_ico
+          background: url('/images/style-title-right.svg') no-repeat 0 0
+          right: 0
+  h2
+    text-align: center
+    span
+      +breakpoint(min-width $break-small)
+        padding: 2.2rem
+        width: 8.5rem
+        &:before
+          +page_subtitle_ico
+          background: url('/images/style-subtitle-left.svg') no-repeat 0 0
+          left: 0
+        &:after
+          +page_subtitle_ico
+          background: url('/images/style-subtitle-right.svg') no-repeat 0 0
+          right: 0
+  .desc
+    text-align: justify
+    +breakpoint(max-width $break-small)
+      +span(12)
+    +breakpoint(min-width $break-small)
+      +span(6)
+      +push(3)
+    +breakpoint(min-width $break-medium)
+      +span(4)
+      +push(4)
+
+  .row .col
+    +breakpoint(max-width $break-small)
+      +span(12)
+    +breakpoint(min-width $break-small)
+      +span(6)
+    +breakpoint(min-width $break-medium)
+      +span(5)
+      +push(1)
+  p
+    line-height: 1.5
+
+

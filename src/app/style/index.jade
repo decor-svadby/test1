@@ -1,0 +1,34 @@
+extends ../_layout
+
+
+block vars
+  - var page = {title: 'Стиль свадьбы', url: 'style', type: 'list', class: 'list style', content: {}, list: []}
+
+  - page.list.push({title: 'Рустик', link: 'rustic'})
+  - page.list.push({title: 'Лесная', link: 'forest'})
+  - page.list.push({title: 'Бохо', link: 'boho'})
+  - page.list.push({title: 'Шебби-Шик', link: 'shebby-shik'})
+  - page.list.push({title: 'Сезонные', link: 'season'})
+  - page.list.push({title: 'Лофт', link: 'loft'})
+  - page.list.push({title: 'Восточная', link: 'oriental'})
+  - page.list.push({title: 'Национальные', link: 'national'})
+  - page.list.push({title: 'Кино (Оскар)', link: 'cinema'})
+  - page.list.push({title: 'Ретро 50-60 г (Стиляги)', link: 'retro-dudes'})
+  - page.list.push({title: 'Ретро 20-30 г (Арт-Нуво)', link: 'retro-artnouveau'})
+  - page.list.push({title: 'Морская', link: 'navy'})
+  - page.list.push({title: 'Рок-Диско', link: 'rock-disco'})
+  - page.list.push({title: 'Путешествия', link: 'travel'})
+  - page.list.push({title: 'Роскошь', link: 'luxury'})
+  - page.list.push({title: 'Гламур', link: 'glamour'})
+  - page.list.push({title: 'Техно', link: 'techno'})
+  - page.list.push({title: 'Свадьба принцессы', link: 'princess'})
+  - page.list.push({title: 'Молодежная', link: 'youth'})
+  - page.list.push({title: 'Цирк', link: 'carnival'})
+  - page.list.push({title: 'Традиционная классическая', link: 'classic'})
+  - page.list.push({title: 'Индивидуальная', link: 'individual'})
+  - page.list.push({title: 'Фото как декор', link: 'photo'})
+  - page.list.push({title: 'Русский стиль', link: 'russian'})
+
+
+block content
+  +list-page(page)

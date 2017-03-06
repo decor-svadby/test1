@@ -1,0 +1,174 @@
+mixin nav(page)
+  .nav-client
+    case page.type
+      when 'home'
+        .left
+          a(href='/contact').link-contact Контакты
+        .right
+          a(href='/about').link-about О нас
+      when 'list'
+      when 'page'
+      default
+        .left.home
+          a(href='/').link-no-decor LeDecor
+          if page.breadcrumbs
+            each item in page.breadcrumbs
+              a(href='/#{item.link}').link-no-decor #{item.name}
+        .right
+          a(href='/order').link-no-decor Заказать свадьбу
+
+mixin title(page)
+  if page.title == ''
+    title Декорирование свадеб
+  else
+    title= page.title
+      |  :: Декорирование свадеб
+
+mixin front-page(page)
+  .header-title
+    span Мы создадим <br> Вашу неповторимую свадьбу!
+  +nav(page)
+  .row.first-page-title
+    img(src='/images/logo-title.svg').logo-title
+    //.first-page-about: a(href='').link-no-decor О нас
+  .container
+    +draw-list(page)
+
+
+mixin list-page(page)
+  if !page.nomenu
+    +nav(page)
+  .container.list-page
+    h1: span #{page.title}
+    +draw-list(page)
+
+mixin draw-list(page)
+  .row
+    each item in page.list
+      case page.type
+        when 'home'
+          - var link = '/'+item.link
+          - var imgpath = '/images/home/'+item.link+'.jpg'
+        when 'element-page'
+          - var link = '/element/'+item.link
+          - var imgpath = '/images/element/'+item.link+'.jpg'
+        when 'zone-page'
+          - var link = '/element/'+item.link
+          - var imgpath = '/images/zone/'+item.link+'.jpg'
+        when 'list'
+        default
+          - var link = '/'+page.url+'/'+item.link
+          - var imgpath = '/images/'+page.url+'/'+item.link+'.jpg'
+
+      a(href='#{link}', title="#{item.title}").link-no-decor
+        .teaser-section
+          h2 #{item.title}
+          .teaser-img-wrapper
+            img(src='#{imgpath}', alt="#{item.title}")
+
+mixin style-page(page)
+  +nav(page)
+  .container
+    h1: span #{page.title}
+
+    .row.desc
+      p !{page.content.desc}
+    .clearfix
+    h2 Варианты оформления в стиле #{page.title}:
+    .slider
+      .nav
+        .left
+        .right
+      - var i = 1;
+      while i < page.slider.qnt + 1
+        .slide
+          img(src='/images/#{page.slider.path}#{i++}.jpg')
+
+      .slide
+    .row
+      .col
+        h2: span Флористика 
+        p !{page.content.flow}
+      .col
+        h2: span Must–have
+        p !{page.content.must}
+    .row
+      a(href="#").btn Заказать свадьбу в стиле #{page.title}
+
+mixin element-page(page)
+  +nav(page)
+  .container
+    h1: span #{page.title}
+    .row
+      .col
+        .desc
+          p !{page.content.desc}
+        .clearfix
+
+      .col
+        .slider
+          .nav
+            .left
+            .right
+          - var i = 1;
+          while i < page.slider.qnt + 1
+            .slide
+              img(src='/images/#{page.slider.path}#{i++}.jpg')
+
+          .slide
+    .row
+      a(href="#").btn #{page.button.text}
+    .row
+      +draw-list(page)
+
+mixin zone-page(page)
+  +nav(page)
+  .container
+    h1: span #{page.title}
+    .row
+      .col
+        .desc
+          p !{page.content.desc}
+        .clearfix
+
+      .col
+        .slider
+          .nav
+            .left
+            .right
+          - var i = 1;
+          while i < page.slider.qnt + 1
+            .slide
+              img(src='/images/#{page.slider.path}#{i++}.jpg')
+
+          .slide
+    .row
+      a(href="#").btn #{page.button.text}
+    .row
+      +draw-list(page)
+
+//- =============
+
+html(lang='en')
+head
+  meta(http-equiv="X-UA-Compatible" content="IE=edge")
+  meta(name='viewport' content='initial-scale=1')
+
+  block vars
+    - var activeMenu = ''
+
+  block title
+    +title(page)
+
+  block styles
+    link(rel='stylesheet' href='/app.min.css')
+  base(href="/" target="_self")
+  body(class!='#{page.class}')
+    block content
+
+  block metrics
+
+  block scripts
+    script(src='/app.min.js')
+
+

@@ -1,0 +1,13 @@
+extends ../../_layout
+
+block vars
+
+  - var description = 'Мечта из детской сказки: ты Принцесса в замке и за тобой приедет Твой Принц. Нежная, волшебная сказка.</p><p>Дух чуда и волшебства. Произойдет чародейство и все будет хорошо. Молодые проживут долго и счастливо… Как в сказке.'
+
+  - var flower = 'Розы, георгины, орхидеи, лилии, фрезия, антирринум.';
+  - var musthave = 'Передаем дух замка. Канделябры. Часы. Короны. Могут быть кареты и лошади. Щиты. Мечи.';
+
+  - var page = {title: 'Свадьба принцессы', url: 'style/princess', type: 'style-page', class: 'page style princess', content: {desc: description, flow: flower, must: musthave}, list: [], breadcrumbs: [{link: 'style', name: 'Стиль свадьбы'}], slider: {path: 'style/princess/princess-', qnt: 6}}
+
+block content
+  +style-page(page)

@@ -1,0 +1,37 @@
+extends ../_layout
+
+
+block vars
+  - var page = {title: 'Цвет свадьбы', url: 'color', type: 'list', class: 'list color', content: {}, list: []}
+
+  - page.list.push({title: 'Красная', link: 'red'})
+  - page.list.push({title: 'Оранжевая', link: 'orange'})
+  - page.list.push({title: 'Желтая', link: 'yellow'})
+  - page.list.push({title: 'Зеленая', link: 'green'})
+  - page.list.push({title: 'Синяя', link: 'blue'})
+  - page.list.push({title: 'Фиолетовая', link: 'violet'})
+  - page.list.push({title: 'Коричневая', link: 'brown'})
+  - page.list.push({title: 'Серая', link: 'grey'})
+  - page.list.push({title: 'Розовая', link: 'pink'})
+  - page.list.push({title: 'Белая', link: 'white'})
+
+  - var page1 = {title: 'Тренды', url: 'color', type: 'list', class: 'list color', content: {}, list: [], nomenu: true}
+
+  - page1.list.push({title: 'Розовый кварц', link: 'rose-quartz'})
+  - page1.list.push({title: 'Персиковая', link: 'peach'})
+  - page1.list.push({title: 'Серенити', link: 'serenity'})
+  - page1.list.push({title: 'Морская синяя', link: 'snorkel-blue'})
+  - page1.list.push({title: 'Лилово-серая', link: 'lilac-grey'})
+  - page1.list.push({title: 'Неоново-зеленая', link: 'green-flash'})
+  - page1.list.push({title: 'Лютиково-желтая', link: 'buttercup'})
+  - page1.list.push({title: 'Празднично-красная', link: 'fiesta'})
+  - page1.list.push({title: 'Мятно-бирюзовая', link: 'limpet-shell'})
+  - page1.list.push({title: 'Марсала', link: 'marsala'})
+  - page1.list.push({title: 'Ледяной кофе', link: 'iced-coffee'})
+  - page1.list.push({title: 'Золотая', link: 'gold'})
+
+
+
+block content
+  +list-page(page)
+  +list-page(page1)

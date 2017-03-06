@@ -1,0 +1,19 @@
+extends ../../_layout
+
+block vars
+
+  - var description = 'То, заветное место, куда жаждет попасть любая детская душа. Цирк. Аттракционы. Веселье.  Клоуны.</p><p>На этот вечер Ваша свадьба взорвется эмоциями радости добра и света.'
+
+  - var page = {title: 'Фотозона', url: 'zone/photo', type: 'zone-page', class: 'page zone photo', content: {desc: description}, list: [], breadcrumbs: [{link: 'zone', name: 'Оформление зон'}], slider: {path: 'zone/registration/registration-', qnt: 7}, button: {text: 'Заказать оформление фотозоны'}, list2 = []}
+
+  - page.list.push({title: 'Выездная регистрация', link: 'registration'})
+  - page.list.push({title: 'Президиум', link: 'presidium'})
+  - page.list.push({title: 'Столы гостей', link: 'guest-tables'})
+  - page.list.push({title: 'Детский стол', link: 'kinder-table'})
+
+
+  - page.list2.push({title: 'Подвесной декор', link: 'element/hanging-decor'})
+  - page.list2.push({title: 'Grand декор', link: 'element/grand-decor'})
+
+block content
+  +zone-page(page)

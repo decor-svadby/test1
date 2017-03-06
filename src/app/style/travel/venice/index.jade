@@ -1,0 +1,13 @@
+extends ../../../_layout
+
+block vars
+
+  - var description = 'Город любви, надежд, новых начинаний. Звуки итальянской музыки, мелодичность.</p><p>Гондолы, вода, карнавал – все лучшее из итальянских традиций. Симбиоз всего в стилях и архитектуре. Дворцовая роскошь. Фонари с розовым стеклом, витражи.'
+
+  - var flower = 'Розы, гладиолусы, орхидеи, маски в букетах, перья, торчащие в разные стороны ветки.';
+  - var musthave = 'Цветное (муранское) стекло, полумрак, люстры, итальянские кружева. Золото. Карнавальная атрибутика (маски, наряды).';
+
+  - var page = {title: 'Венеция', url: 'style/venice', type: 'style-page', class: 'page style venice', content: {desc: description, flow: flower, must: musthave}, list: [], breadcrumbs: [{link: 'style', name: 'Стиль свадьбы'},{link: 'style/travel', name: 'Путешествия'}], slider: {path: 'style/travel/venice/venice-', qnt: 6}}
+
+block content
+  +style-page(page)

@@ -1,0 +1,36 @@
+extends ../_layout
+
+
+block vars
+
+  - var page = {title: 'Элементы', url: 'element', type: 'list', class: 'list element', content: {}, list: []}
+
+
+  - page.list.push({title: 'Арка', link: 'arc'})
+  - page.list.push({title: 'Centerpiece', link: 'centerpiece'})
+  - page.list.push({title: 'Композиция на столы', link: 'table-composition'})
+  - page.list.push({title: 'Канделябры', link: 'candelabra'})
+  - page.list.push({title: 'Входная зона', link: 'enter'})
+  - page.list.push({title: 'Лестница', link: 'stairway'})
+  - page.list.push({title: 'Подвесной декор', link: 'hanging-decor'})
+  - page.list.push({title: 'Grand декор', link: 'grand-decor'})
+  - page.list.push({title: 'Дорожки из цветов', link: 'flower-paths'})
+  - page.list.push({title: 'Драпировка тканями', link: 'drapery'})
+  - page.list.push({title: 'Украшение стульев', link: 'chairs-decor'})
+  - page.list.push({title: 'Сервировка стола', link: 'tableware'})
+  - page.list.push({title: 'Букеты и бутоньерки', link: 'bouquets-boutonnieres'})
+  - page.list.push({title: 'Венки браслеты', link: 'wreaths-bracelets'})
+  - page.list.push({title: 'Световые конструкции', link: 'light-construction'})
+  - page.list.push({title: 'Ниспадающие композиции', link: 'flowing-composition'})
+  - page.list.push({title: 'Качели', link: 'swing'})
+  - page.list.push({title: 'Украшение авто', link: 'auto-decor'})
+  - page.list.push({title: 'Инсталляции', link: 'installation'})
+  - page.list.push({title: 'Presswall', link: 'presswall'})
+  - page.list.push({title: 'Постеры и фото', link: 'posters-photos'})
+  - page.list.push({title: 'Указатели и таблички', link: 'signs-labels'})
+  - page.list.push({title: 'Композиции для фотозон', link: 'photo-composition'})
+  - page.list.push({title: 'Гирлянды', link: 'garlands'})
+
+
+block content
+  +list-page(page)

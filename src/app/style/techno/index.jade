@@ -1,0 +1,13 @@
+extends ../../_layout
+
+block vars
+
+  - var description = 'Тренд – современность. Игра с современными материалами, фактурой, светом и формой. Сугубо индустриальный, в чем – то анти – природный стиль.</p><p>Вы можете запечатлеть дух времени.'
+
+  - var flower = 'Антуриум, стрелиция, герберы, каллы, ветки, монстера, искусственные цветы.';
+  - var musthave = 'Строгие формы. Обыгрываются конструкции: металл, дерево, пластик. Красивые элементы освещения: шары, лампы, неоновые гирлянды. Могут быть гигантские композиции (в т.ч. Гигантские цветы).';
+
+  - var page = {title: 'Техно', url: 'style/techno', type: 'style-page', class: 'page style techno', content: {desc: description, flow: flower, must: musthave}, list: [], breadcrumbs: [{link: 'style', name: 'Стиль свадьбы'}], slider: {path: 'style/techno/techno-', qnt: 6}}
+
+block content
+  +style-page(page)

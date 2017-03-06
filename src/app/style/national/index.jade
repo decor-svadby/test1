@@ -1,0 +1,14 @@
+extends ../../_layout
+
+
+block vars
+  - var page = {title: 'Национальные свадьбы', url: 'style/national', type: 'list', class: 'style list national', content: {}, list: [], breadcrumbs: [{link: 'style', name: 'Стиль свадьбы'}]}
+
+
+  - page.list.push({title: 'Китай', link: 'china'})
+  - page.list.push({title: 'Индия', link: 'india'})
+  - page.list.push({title: 'Мексика', link: 'mexico'})
+  - page.list.push({title: 'Греция', link: 'greece'})
+
+block content
+  +list-page(page)

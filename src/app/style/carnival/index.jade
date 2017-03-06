@@ -1,0 +1,13 @@
+extends ../../_layout
+
+block vars
+
+  - var description = 'То, заветное место, куда жаждет попасть любая детская душа. Цирк. Аттракционы. Веселье.  Клоуны.</p><p>На этот вечер Ваша свадьба взорвется эмоциями радости добра и света.'
+
+  - var flower = 'Розы, микс с воздушными шарами, каспедия, бруния, статица, фрезия, гортензия, вибурнум.';
+  - var musthave = 'Веселые фото – зоны. Много мини - зон для развлечений. Официанты и ведущие, переодетые в клоунов.';
+
+  - var page = {title: 'Circus', url: 'style/carnival', type: 'style-page', class: 'page style carnival', content: {desc: description, flow: flower, must: musthave}, list: [], breadcrumbs: [{link: 'style', name: 'Стиль свадьбы'}], slider: {path: 'style/carnival/carnival-', qnt: 6}}
+
+block content
+  +style-page(page)

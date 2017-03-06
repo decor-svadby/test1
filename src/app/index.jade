@@ -1,0 +1,17 @@
+extends _layout
+
+block vars
+
+  - var page = {title: 'Главная', url: '', type: 'home', class: 'home list', content: {},list: []}
+  //- - var list = []
+
+  - page.list.push({title: 'Стиль свадьбы', link: 'style'})
+  - page.list.push({title: 'Цвет свадьбы', link: 'color'})
+  - page.list.push({title: 'Оформление зон', link: 'zone'})
+  - page.list.push({title: 'Элементы', link: 'element'})
+
+
+block content
+  +front-page(page)
+
+

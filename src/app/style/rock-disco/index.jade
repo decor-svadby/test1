@@ -1,0 +1,13 @@
+extends ../../_layout
+
+block vars
+
+  - var description = 'Главное -  танцы, танцевальная музыка, танцпол. Музыка в стиле диско. Задайте танцевальный ритм Вашей будущей совместной жизни.</p><p>Много блестящего. Имитация блеска и лазера. Один из главных элементов – дискошар. Мыльные пузыри, дымовая завеса. Цвета и элементы: стекло – зеркальность – хром – металлик.'
+
+  - var flower = 'Каллы, гвоздики, гладиолусы, хризантемы.';
+  - var musthave = 'Цветомузыка. Все сияет и блестит. Обыгрывание темы музыкальных символов и инструментов в декоре.';
+
+  - var page = {title: 'Рок-Диско', url: 'style/rock-disco', type: 'style-page', class: 'page style rock-disco', content: {desc: description, flow: flower, must: musthave}, list: [], breadcrumbs: [{link: 'style', name: 'Стиль свадьбы'}], slider: {path: 'style/rock-disco/rock-disco-', qnt: 6}}
+
+block content
+  +style-page(page)

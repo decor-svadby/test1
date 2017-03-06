@@ -1,0 +1,13 @@
+extends ../../_layout
+
+block vars
+
+  - var description = 'Самый модный стиль. Отражает лучшие и наиболее роскошные элементы времени. Сочетание роскоши и нового, современного взгляда на комфорт и статус.</p><p>Сочетание несочетаемого, но самого лучшего и богатого. Невеста – как картинка из модных журналов.'
+
+  - var flower = 'Роза, гортензия, фаленопсис, цимбидиум, пионы, гиппеаструм, амаранта.';
+  - var musthave = 'Обыгрывание каких – нибудь модностей в деталях и элементах. Много богатства: блеск, бриллианты, золото. Красивые драпировки и ткани.';
+
+  - var page = {title: 'Гламур', url: 'style/glomour', type: 'style-page', class: 'page style glomour', content: {desc: description, flow: flower, must: musthave}, list: [], breadcrumbs: [{link: 'style', name: 'Стиль свадьбы'}], slider: {path: 'style/glomour/glomour-', qnt: 6}}
+
+block content
+  +style-page(page)

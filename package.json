@@ -1,0 +1,30 @@
+{
+  "name": "decor-svadba",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shurochkin/decor-svadba.git"
+  },
+  "author": "Andrey Aleksandrov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shurochkin/decor-svadba/issues"
+  },
+  "homepage": "https://github.com/shurochkin/decor-svadba#readme",
+  "devDependencies": {
+    "ds-gulp-builder": "^0.2.2",
+    "ds-gulp-builder-browser-sync": "^0.2.0",
+    "ds-gulp-builder-browserify": "^0.2.0",
+    "ds-gulp-builder-jade": "^0.2.0",
+    "ds-gulp-builder-sass": "^0.2.1",
+    "gulp": "^3.9.1",
+    "gulp-include": "^2.3.1",
+    "gulp-jade": "^1.1.0",
+    "gulp-uglify": "^2.0.0"
+  }
+}

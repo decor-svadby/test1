@@ -1,0 +1,13 @@
+extends ../../_layout
+
+block vars
+
+  - var description = 'Ваши лучшие фотографии. Запечатленная история любви в пространстве. Счастливые моменты пары украшают пространство праздника.</p><p>На своей свадьбе – только Вы и ничего кроме Вас. Любимые песни и мелодии. Кроссворды и задания про жизнь пары как энтертейнмент.'
+
+  - var flower = 'Цветочный ассортимент Любимые цветы пары. Если черно – белые фотографии – на контрасте могут быть яркие цветы.';
+  - var musthave = 'Везде много фотографий, коллажей. Кинопроектор. Свечи и прочие элементы интимности и романтичности.';
+
+  - var page = {title: 'Фото как декор', url: 'style/photo', type: 'style-page', class: 'page style photo', content: {desc: description, flow: flower, must: musthave}, list: [], breadcrumbs: [{link: 'style', name: 'Стиль свадьбы'}], slider: {path: 'style/photo/photo-', qnt: 6}}
+
+block content
+  +style-page(page)
