@@ -3,12 +3,12 @@
 , с использование ds-gulp-builder (https://www.npmjs.com/package/ds-gulp-builder,  https://github.com/delightsoft/DSGulpBuilder)
 
     {task, async, sync, go, gutil, errorHandler} = require('ds-gulp-builder')(gulp = require('gulp'))
-    # {task, async, sync, go, gutil, errorHandler} = require('C:\\GIT\\DSGulpBuilder\\main')(gulp = require('gulp'))
 
 Для gulp-задач, которых нет в ds-gulp-builder подключаем необходимые npm-пакеты
 
     path = require 'path'
     jade = require 'gulp-jade'
+    pug = require 'gulp-pug'
     include = require 'gulp-include'
     changed = require 'gulp-changed'
     (notify = require 'gulp-notify').logger (->)

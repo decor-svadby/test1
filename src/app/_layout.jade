@@ -75,16 +75,13 @@ mixin style-page(page)
       p !{page.content.desc}
     .clearfix
     h2 Варианты оформления в стиле #{page.title}:
+    .col
     .slider
-      .nav
-        .left
-        .right
       - var i = 1;
       while i < page.slider.qnt + 1
         .slide
           img(src='/images/#{page.slider.path}#{i++}.jpg')
 
-      .slide
     .row
       .col
         h2: span Флористика 
@@ -107,9 +104,6 @@ mixin element-page(page)
 
       .col
         .slider
-          .nav
-            .left
-            .right
           - var i = 1;
           while i < page.slider.qnt + 1
             .slide
@@ -133,15 +127,11 @@ mixin zone-page(page)
 
       .col
         .slider
-          .nav
-            .left
-            .right
           - var i = 1;
           while i < page.slider.qnt + 1
             .slide
               img(src='/images/#{page.slider.path}#{i++}.jpg')
 
-          .slide
     .row
       a(href="#").btn #{page.button.text}
     .row
@@ -162,6 +152,7 @@ head
 
   block styles
     link(rel='stylesheet' href='/app.min.css')
+    link(rel='stylesheet' href='/jquery.bxslider.css')
   base(href="/" target="_self")
   body(class!='#{page.class}')
     block content
@@ -169,6 +160,7 @@ head
   block metrics
 
   block scripts
-    script(src='/app.min.js')
-
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+    script(src='/jquery.bxslider.js')
+    script(src='/app.js')
 
