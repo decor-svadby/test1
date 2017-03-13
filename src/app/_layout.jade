@@ -76,11 +76,12 @@ mixin style-page(page)
     .clearfix
     h2 Варианты оформления в стиле #{page.title}:
     .col
-    .slider
-      - var i = 1;
-      while i < page.slider.qnt + 1
-        .slide
-          img(src='/images/#{page.slider.path}#{i++}.jpg')
+      center 
+        .slider
+             - var i = 1;
+             while i < page.slider.qnt + 1
+             .slide
+                 img(src='/images/#{page.slider.path}#{i++}.jpg')
 
     .row
       .col
@@ -103,13 +104,13 @@ mixin element-page(page)
         .clearfix
 
       .col
-        .slider
-          - var i = 1;
-          while i < page.slider.qnt + 1
-            .slide
-              img(src='/images/#{page.slider.path}#{i++}.jpg')
+        center
+             .slider
+                 - var i = 1;
+                 while i < page.slider.qnt + 1
+                 .slide
+                     img(src='/images/#{page.slider.path}#{i++}.jpg')
 
-          .slide
     .row
       a(href="#").btn #{page.button.text}
     .row
@@ -162,5 +163,5 @@ head
   block scripts
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
     script(src='/jquery.bxslider.js')
-    script(src='/app.js')
+    script(src='/app.min.js')
 

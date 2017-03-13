@@ -17,10 +17,11 @@
   },
   "homepage": "https://github.com/shurochkin/decor-svadba#readme",
   "devDependencies": {
+    "coffee-script": "^1.12.4",
     "ds-gulp-builder": "^0.2.2",
     "ds-gulp-builder-browser-sync": "^0.2.2",
     "ds-gulp-builder-browserify": "^0.2.5",
-    "ds-gulp-builder-pug": "^0.2.2",
+    "ds-gulp-builder-jade": "^0.2.3",
     "ds-gulp-builder-sass": "^0.2.3",
     "gulp": "^3.9.1",
     "gulp-include": "^2.3.1",

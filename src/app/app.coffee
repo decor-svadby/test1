@@ -3,6 +3,6 @@
 $('.slider')
   .show()
   .bxSlider({
-    mode: 'fade'
+//    mode: 'fade'
   })
 

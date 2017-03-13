@@ -8,7 +8,6 @@
 
     path = require 'path'
     jade = require 'gulp-jade'
-    pug = require 'gulp-pug'
     include = require 'gulp-include'
     changed = require 'gulp-changed'
     (notify = require 'gulp-notify').logger (->)
@@ -31,6 +30,8 @@
 
     tasks.push task('gh-CNAME').copy('./src/CNAME').dest('./build')
     tasks.push task('gh-nojekyll').copy('./src/.nojekyll').dest('./build')
+    tasks.push task('js-copy').copy('./static/*.js').dest('./build')
+    tasks.push task('css-copy').copy('./static/*.css').dest('./build')
 
 Основное приложение
 ------------------------------
