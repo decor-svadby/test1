@@ -136,6 +136,32 @@ mixin zone-page(page)
     .row
       +draw-list(page)
 
+
+mixin color-page(page)
+  +nav(page)
+  .container
+    h1: span #{page.title}
+    .row
+      .col
+        .desc
+          p !{page.content.symb}
+          p !{page.content.mood}
+          p !{page.content.comb}
+        .clearfix
+
+      .col
+        .slider
+          - var i = 1;
+          while i < page.slider.qnt + 1
+            .slide
+              img(src='/images/#{page.slider.path}#{i++}.jpg')
+
+    .row
+      a(href="#").btn #{page.button.text}
+    .row
+      +draw-list(page)
+
+
 //- =============
 
 html(lang='en')
