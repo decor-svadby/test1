@@ -15,7 +15,7 @@ mixin nav(page)
             each item in page.breadcrumbs
               a(href='/#{item.link}').link-no-decor #{item.name}
         .right
-          a(href='/order').link-no-decor Заказать свадьбу
+          a(href='/order').link-no-decor Заказать оформление
 
 mixin title(page)
   if page.title == ''
@@ -92,7 +92,7 @@ mixin style-page(page)
         p !{page.content.must}
     .row
       center
-        a(href="#").btn Заказать свадьбу в стиле #{page.title}
+        a(href="#").btn Заказать оформление в стиле #{page.title}
 
 mixin element-page(page)
   +nav(page)
@@ -105,11 +105,12 @@ mixin element-page(page)
         .clearfix
 
       .col
-        .slider
-          - var i = 1;
-          while i < page.slider.qnt + 1
-            .slide
-              img(src='/images/#{page.slider.path}#{i++}.jpg')
+        center
+          .slider
+            - var i = 1;
+            while i < page.slider.qnt + 1
+              .slide
+                img(src='/images/#{page.slider.path}#{i++}.jpg')
 
     .row
       a(href="#").btn #{page.button.text}
@@ -127,11 +128,12 @@ mixin zone-page(page)
         .clearfix
 
       .col
-        .slider
-          - var i = 1;
-          while i < page.slider.qnt + 1
-            .slide
-              img(src='/images/#{page.slider.path}#{i++}.jpg')
+        center
+          .slider
+            - var i = 1;
+            while i < page.slider.qnt + 1
+              .slide
+                img(src='/images/#{page.slider.path}#{i++}.jpg')
 
     .row
       a(href="#").btn #{page.button.text}
@@ -146,23 +148,48 @@ mixin color-page(page)
     .row
       .col
         .desc
+          h3 Символика
           p !{page.content.symb}
+          h3 Настроение
           p !{page.content.mood}
+          h3 Сочетания
           p !{page.content.comb}
         .clearfix
 
       .col
-        .slider
-          - var i = 1;
-          while i < page.slider.qnt + 1
-            .slide
-              img(src='/images/#{page.slider.path}#{i++}.jpg')
+        center
+          .slider
+            - var i = 1;
+            while i < page.slider.qnt + 1
+              .slide
+                img(src='/images/#{page.slider.path}#{i++}.jpg')
 
     .row
-      a(href="#").btn #{page.button.text}
+      center
+        a(href="#").btn Заказать оформление
     .row
       +draw-list(page)
 
+
+mixin about-page(page)
+  +nav(page)
+  .container
+    h2: span #{page.title}
+    .row
+      .col
+        .desc
+          p !{page.content.text}
+          .clearfix
+
+mixin contact-page(page)
+  +nav(page)
+  .container
+    h2: span #{page.title}
+    .row
+      .col
+        .desc
+          p !{page.content.text}
+          .clearfix
 
 //- =============
 

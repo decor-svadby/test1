@@ -2,11 +2,11 @@ extends ../../_layout
 
 block vars
 
-  - var symbol = '<h3>Символика</h3>Оранжевый – это смесь красного и желтого, поэтому он собрал в себя лучшие стороны этих цветов. Это цвет плодородия, богатства, теплой и надежной любви. Цвет веселья и радости.'
-  - var mood = '<h3>Настроение</h3>Идеально подходит для осенней свадьбы с ее тыквами, плодами и осенними листьями. Но и в любое другое время года подарит радость и тепло.'
-  - var combination = '<h3>Сочетания</h3>Беспроигрышно: с серым, бежевым, белым, зеленым. Стильно: с элементами фисташкового. Модные тренды: с фукси.'
+  - var symbol = 'Оранжевый – это смесь красного и желтого, поэтому он собрал в себя лучшие стороны этих цветов. Это цвет плодородия, богатства, теплой и надежной любви. Цвет веселья и радости.'
+  - var mood = 'Идеально подходит для осенней свадьбы с ее тыквами, плодами и осенними листьями. Но и в любое другое время года подарит радость и тепло.'
+  - var combination = 'Беспроигрышно: с серым, бежевым, белым, зеленым. Стильно: с элементами фисташкового. Модные тренды: с фукси.'
 
-  - var page = {title: 'Оранжевая', url: 'color/orange', type: 'color-page', class: 'page color orange', content: {symb: symbol, mood: mood, comb: combination}, list: [], slider: {path: 'color/orange/orange-', qnt: 6}, breadcrumbs: [{link: 'color', name: 'Цвет свадьбы'}], button: {text: 'Заказать свадьбу'},}
+  - var page = {title: 'Оранжевая', url: 'color/orange', type: 'color-page', class: 'page color orange', content: {symb: symbol, mood: mood, comb: combination}, list: [], slider: {path: 'color/orange/orange-', qnt: 6}, breadcrumbs: [{link: 'color', name: 'Цвет свадьбы'}], button: {text: 'Заказать оформление'},}
 
 block content
   +color-page(page)

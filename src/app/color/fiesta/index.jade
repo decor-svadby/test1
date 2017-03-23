@@ -2,11 +2,11 @@ extends ../../_layout
 
 block vars
 
-  - var symbol = '<h3>Символика</h3>Яркий, сочный оттенок красного. Самый близкий оттенок – fiesta. Это отдых, страсть, палящие солнце и жгучие танцы.'
-  - var mood = '<h3>Настроение</h3>Настроение жаркое, пылающее, всех заставит двигаться, радоваться, танцевать. Свадьба не будет скучной.'
-  - var combination = '<h3>Сочетания</h3>Беспроигрышно: с белым, серым. Стильно: с зеленым. Модные тренды: с элементами золотого.'
+  - var symbol = 'Яркий, сочный оттенок красного. Самый близкий оттенок – fiesta. Это отдых, страсть, палящие солнце и жгучие танцы.'
+  - var mood = 'Настроение жаркое, пылающее, всех заставит двигаться, радоваться, танцевать. Свадьба не будет скучной.'
+  - var combination = 'Беспроигрышно: с белым, серым. Стильно: с зеленым. Модные тренды: с элементами золотого.'
 
-  - var page = {title: 'Празднично-красная', url: 'color/fiesta', type: 'color-page', class: 'page color fiesta', content: {symb: symbol, mood: mood, comb: combination}, list: [], slider: {path: 'color/fiesta/fiesta-', qnt: 6}, breadcrumbs: [{link: 'color', name: 'Цвет свадьбы'}], button: {text: 'Заказать свадьбу'},}
+  - var page = {title: 'Празднично-красная', url: 'color/fiesta', type: 'color-page', class: 'page color fiesta', content: {symb: symbol, mood: mood, comb: combination}, list: [], slider: {path: 'color/fiesta/fiesta-', qnt: 6}, breadcrumbs: [{link: 'color', name: 'Цвет свадьбы'}], button: {text: 'Заказать оформление'},}
 
 block content
   +color-page(page)

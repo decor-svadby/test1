@@ -1,0 +1,10 @@
+extends _layout
+
+block vars
+
+  - var txt = 'КОНТАКТЫ СКОРО БУДУТ ЗДЕСЬ'
+  - var page = {title: 'Контакты', url: '', type: 'contact', class: 'contact list', content: {text: txt },list: []};
+
+
+block content
+  +contact-page(page)
