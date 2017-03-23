@@ -1,0 +1,12 @@
+extends ../../_layout
+
+block vars
+
+  - var symbol = '<h3>Символика</h3>Бирюза и мята подарит Вам ощущение прохлады, расслабленности. Это движение морской волны, мятная веточка, свежий морской ветерок.'
+  - var mood = '<h3>Настроение</h3>Мятно – бирюзовая свадьба окунет Вас в океан нежности, трогательности и конечно же стильности.'
+  - var combination = '<h3>Сочетания</h3>Беспроигрышно: с белым, серым. Стильно: с серебром. Модные тренды: с элементами красного.'
+
+  - var page = {title: 'Мятно-бирюзовая', url: 'color/limpet-shell', type: 'color-page', class: 'page color limpet-shell', content: {symb: symbol, mood: mood, comb: combination}, list: [], slider: {path: 'color/limpet-shell/limpet-shell-', qnt: 6}, breadcrumbs: [{link: 'color', name: 'Цвет свадьбы'}], button: {text: 'Заказать свадьбу'},}
+
+block content
+  +color-page(page)

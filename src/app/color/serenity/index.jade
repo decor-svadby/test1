@@ -1,0 +1,12 @@
+extends ../../_layout
+
+block vars
+
+  - var symbol = '<h3>Символика</h3>В переводе с английского serenity обозначает безмятежность, что полностью перекликается с его сутью. Это легкий пепельно – голубой цвет подарит вам небесную, прозрачную дымку.'
+  - var mood = '<h3>Настроение</h3>Это цвет английской аристократии, спокойствия, выдержанности. Некоторой безоблачности, которая будет сопутствовать Вам в жизни.'
+  - var combination = '<h3>Сочетания</h3>Беспроигрышно: с белым, розовым. Стильно: с персиковым. Модные тренды: с красным.'
+
+  - var page = {title: 'Серенити', url: 'color/serenity', type: 'color-page', class: 'page color serenity', content: {symb: symbol, mood: mood, comb: combination}, list: [], slider: {path: 'color/serenity/serenity-', qnt: 5}, breadcrumbs: [{link: 'color', name: 'Цвет свадьбы'}], button: {text: 'Заказать свадьбу'},}
+
+block content
+  +color-page(page)

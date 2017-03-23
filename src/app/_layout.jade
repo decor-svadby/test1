@@ -76,11 +76,12 @@ mixin style-page(page)
     .clearfix
     h2 Варианты оформления в стиле #{page.title}:
     .col
-      .slider
-       - var i = 1;
-       while i < page.slider.qnt + 1
-        .slide
-          img(src='/images/#{page.slider.path}#{i++}.jpg')
+      center
+        .slider
+         - var i = 1;
+         while i < page.slider.qnt + 1
+          .slide
+            img(src='/images/#{page.slider.path}#{i++}.jpg')
 
     .row
       .col
@@ -90,7 +91,8 @@ mixin style-page(page)
         h2: span Must–have
         p !{page.content.must}
     .row
-      a(href="#").btn Заказать свадьбу в стиле #{page.title}
+      center
+        a(href="#").btn Заказать свадьбу в стиле #{page.title}
 
 mixin element-page(page)
   +nav(page)

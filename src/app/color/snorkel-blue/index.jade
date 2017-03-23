@@ -1,0 +1,12 @@
+extends ../../_layout
+
+block vars
+
+  - var symbol = '<h3>Символика</h3>Темно синий цвет символизирует вечность, постоянство, связь с божественным, взаимопроникновение, глубины. Он защищает от злых духов.'
+  - var mood = '<h3>Настроение</h3>Темно – синий цвет дарит покой, уравновешенное, спокойное глубокое состояние. Даже частичка этого цвета в состоянии усмирить и успокоить бурю эмоций.'
+  - var combination = '<h3>Сочетания</h3>Беспроигрышно: с белым, розовым. Стильно: с серебром. Модные тренды: с золотом.'
+
+  - var page = {title: 'Морская синяя', url: 'color/snorkel-blue', type: 'color-page', class: 'page color snorkel-blue', content: {symb: symbol, mood: mood, comb: combination}, list: [], slider: {path: 'color/snorkel-blue/snorkel-blue-', qnt: 6}, breadcrumbs: [{link: 'color', name: 'Цвет свадьбы'}], button: {text: 'Заказать свадьбу'},}
+
+block content
+  +color-page(page)

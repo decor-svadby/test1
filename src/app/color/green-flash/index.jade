@@ -1,0 +1,12 @@
+extends ../../_layout
+
+block vars
+
+  - var symbol = '<h3>Символика</h3>Вспышка. Яркость. Хулиганство. Взято лучшее из неоновых оттенков и разбавлено ароматом свежераспустившейся зелени.'
+  - var mood = '<h3>Настроение</h3>На неоново – зеленой свадьбе Вы точно не заскучаете. Она Вас поднимет и заставит радоваться и дурачиться.'
+  - var combination = '<h3>Сочетания</h3>Беспроигрышно: с белым, кремовым. Стильно: с серебром. Модные тренды: с элементами черного.'
+
+  - var page = {title: 'Неоново-зелёная', url: 'color/green-flash', type: 'color-page', class: 'page color green-flash', content: {symb: symbol, mood: mood, comb: combination}, list: [], slider: {path: 'color/green-flash/green-flash-', qnt: 5}, breadcrumbs: [{link: 'color', name: 'Цвет свадьбы'}], button: {text: 'Заказать свадьбу'},}
+
+block content
+  +color-page(page)

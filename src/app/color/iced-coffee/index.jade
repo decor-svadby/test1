@@ -1,0 +1,12 @@
+extends ../../_layout
+
+block vars
+
+  - var symbol = '<h3>Символика</h3>Очень приятный натуральный цвет. Сразу представляется латте с кубиками льда в прозрачном стакане. Сочетание прохлады и истинного аристократизма.'
+  - var mood = '<h3>Настроение</h3>Свадьба в цветах Ледяного кофе подарит Вам спокойное, расслабляющее настроение. Удивит всех Ваших гостей необычностью подходов и сочетаний.'
+  - var combination = '<h3>Сочетания</h3>Беспроигрышно: с белым, оранжевым. Стильно: с насыщенным коричневым. Модные тренды: с розовым.'
+
+  - var page = {title: 'Ледяной кофе', url: 'color/iced-coffee', type: 'color-page', class: 'page color iced-coffee', content: {symb: symbol, mood: mood, comb: combination}, list: [], slider: {path: 'color/iced-coffee/iced-coffee-', qnt: 6}, breadcrumbs: [{link: 'color', name: 'Цвет свадьбы'}], button: {text: 'Заказать свадьбу'},}
+
+block content
+  +color-page(page)

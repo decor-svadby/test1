@@ -1,0 +1,12 @@
+extends ../../_layout
+
+block vars
+
+  - var symbol = '<h3>Символика</h3>Сочетание оттенков строгого серого и таинственного фиолетового подарит Вам шик и нежность, гламур и собранность одновременно. Это сочетание несочетаемого.'
+  - var mood = '<h3>Настроение</h3>Лилово – серая свадьба подарит Вам прохладу, покой и уравновешенность с легким налетом сказки и таинственности.'
+  - var combination = '<h3>Сочетания</h3>Беспроигрышно: с белым, зеленым. Стильно: с серебром. Модные тренды: с насыщенным серым.'
+
+  - var page = {title: 'Лилово-серая', url: 'color/lilac-grey', type: 'color-page', class: 'page color lilac-grey', content: {symb: symbol, mood: mood, comb: combination}, list: [], slider: {path: 'color/lilac-grey/lilac-grey-', qnt: 5}, breadcrumbs: [{link: 'color', name: 'Цвет свадьбы'}], button: {text: 'Заказать свадьбу'},}
+
+block content
+  +color-page(page)
