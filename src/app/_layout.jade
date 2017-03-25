@@ -171,25 +171,34 @@ mixin color-page(page)
       +draw-list(page)
 
 
+mixin sendmail
+    table
+      form        
+          p 
+            input(type="text", name="addr", width=300, height=50, value="Ваш E-MAIL") 
+          p 
+            input(type="text", name="message", width=300, value="Ваше сообщение")
+          .btn Отправить
+
 mixin about-page(page)
   +nav(page)
   .container
-    h2: span #{page.title}
+    h1: span #{page.title}
     .row
-      .col
-        .desc
+      .desc
           p !{page.content.text}
           .clearfix
 
 mixin contact-page(page)
   +nav(page)
   .container
-    h2: span #{page.title}
+    h1: span #{page.title}
     .row
-      .col
-        .desc
-          p !{page.content.text}
-          .clearfix
+      .desc
+        p !{page.content.text}
+        .clearfix
+    .row
+        +sendmail(page)
 
 //- =============
 
