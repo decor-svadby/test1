@@ -53,7 +53,7 @@ mixin draw-list(page)
           - var link = '/element/'+item.link
           - var imgpath = '/images/element/'+item.link+'.jpg'
         when 'zone-page'
-          - var link = '/element/'+item.link
+          - var link = '/zone/'+item.link
           - var imgpath = '/images/zone/'+item.link+'.jpg'
         when 'list'
         default
@@ -125,6 +125,8 @@ mixin zone-page(page)
       .col
         .desc
           p !{page.content.desc}
+          p !{page.content.decor}
+          p !{page.content.elements}
         .clearfix
 
       .col
@@ -136,7 +138,10 @@ mixin zone-page(page)
                 img(src='/images/#{page.slider.path}#{i++}.jpg')
 
     .row
-      a(href="#").btn #{page.button.text}
+      center
+        a(href="#").btn #{page.button.text}
+        br
+        br
     .row
       +draw-list(page)
 

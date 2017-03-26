@@ -1,0 +1,21 @@
+extends ../../_layout
+
+block vars
+
+  - var description = 'Основная зона веселья, развлечения и смыслов. На ней танцуют и развлекаются гости и на ней же проходят красивые свадебные обряды: танец молодых и их танцы с родителями.'
+  - var decor = 'Декор: Обычно занимает большое пространство, поэтому когда оно отдельно зонально выделено или украшено с точки зрения общего декора помещения смотрится очень эффектно.'
+  - var elements = 'Элементы:  Входная зона,  Лестница,  Grand декор, Указатели и таблички, Press wall.'
+
+  - var page = {title: 'Танцпол', url: 'zone/dance-floor', type: 'zone-page', class: 'page zone dance-floor', content: {desc: description, decor: decor, elements: elements}, list: [], breadcrumbs: [{link: 'zone', name: 'Оформление зон'}], slider: {path: 'zone/dance-floor/dance-floor-', qnt: 6}, button: {text: 'Заказать оформление танцпола'}, list2: []};
+
+  - page.list.push({title: 'Welcome', link: 'welcome'})
+  - page.list.push({title: 'Президиум', link: 'presidium'})
+  - page.list.push({title: 'Столы гостей', link: 'guest-tables'})
+  - page.list.push({title: 'Детский стол', link: 'kinder-table'})
+
+
+  - page.list2.push({title: 'Подвесной декор', link: 'element/hanging-decor'})
+  - page.list2.push({title: 'Grand декор', link: 'element/grand-decor'})
+
+block content
+  +zone-page(page)

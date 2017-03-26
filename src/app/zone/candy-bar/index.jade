@@ -1,0 +1,21 @@
+extends ../../_layout
+
+block vars
+
+  - var description = 'Любимейшая зона детей и некоторых взрослых.  Своеобразная Dolce Vita или сладкая сказка.  Конфетки, сладости, фрукты, попкорн… Все, что душа пожелает. Если  добавить мини – пакетики, чтобы гости могли взять угощение с собой – что может быть лучше.'
+  - var decor = 'Декор: обязательны элементы свадьбы. Обычно – отдельно стоящий стол или другая вместительная поверхность. '
+  - var elements = 'Элементы: Centerpiece,  Подвесной декор, Ниспадающие композиции, Гирлянды.  '
+
+  - var page = {title: 'Candy-bar', url: 'zone/Candy-bar', type: 'zone-page', class: 'page zone Candy-bar', content: {desc: description, decor: decor, elements: elements}, list: [], breadcrumbs: [{link: 'zone', name: 'Оформление зон'}], slider: {path: 'zone/candy-bar/candy-bar-', qnt: 16}, button: {text: 'Заказать оформление candy-bar'}, list2: []};
+
+  - page.list.push({title: 'Welcome', link: 'welcome'})
+  - page.list.push({title: 'Президиум', link: 'presidium'})
+  - page.list.push({title: 'Столы гостей', link: 'guest-tables'})
+  - page.list.push({title: 'Детский стол', link: 'kinder-table'})
+
+
+  - page.list2.push({title: 'Подвесной декор', link: 'element/hanging-decor'})
+  - page.list2.push({title: 'Grand декор', link: 'element/grand-decor'})
+
+block content
+  +zone-page(page)

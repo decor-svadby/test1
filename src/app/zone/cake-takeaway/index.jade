@@ -1,0 +1,21 @@
+extends ../../_layout
+
+block vars
+
+  - var description = 'Вынос торта гостям  - это задел на сладкую  и безоблачную жизнь. Одна из завершающих и наиболее зрелищных традиций. Взрыв и фейерверк эмоций молодых и гостей.'
+  - var decor = 'Декор: часто используются свечи и прочие осветительные эффекты. Модно украшать живыми цветами или элементами стилистики свадьбы.'
+  - var elements = 'Элементы: Centerpiece,  Подвесной декор, Ниспадающие композиции, Гирлянды. '
+
+  - var page = {title: 'Вынос торта', url: 'zone/cake-takeaway', type: 'zone-page', class: 'page zone cake-takeaway', content: {desc: description, decor: decor, elements: elements}, list: [], breadcrumbs: [{link: 'zone', name: 'Оформление зон'}], slider: {path: 'zone/cake-takeaway/cake-takeaway-', qnt: 7}, button: {text: 'Заказать оформление выноса торта'}, list2: []};
+
+  - page.list.push({title: 'Welcome', link: 'welcome'})
+  - page.list.push({title: 'Президиум', link: 'presidium'})
+  - page.list.push({title: 'Столы гостей', link: 'guest-tables'})
+  - page.list.push({title: 'Детский стол', link: 'kinder-table'})
+
+
+  - page.list2.push({title: 'Подвесной декор', link: 'element/hanging-decor'})
+  - page.list2.push({title: 'Grand декор', link: 'element/grand-decor'})
+
+block content
+  +zone-page(page)

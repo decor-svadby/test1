@@ -1,0 +1,18 @@
+extends ../../_layout
+
+block vars
+
+  - var description = 'Основной тренд времени – красивая фотография, которая рекламирует и прославляет данное событие, а также дарит память навсегда не только для молодых, но и для всех гостей.'
+  - var decor = 'Декор:  Могут  быть как веселые, прикольные, так и очень красивые, торжественные. Часто перекликаются со стилем свадьбы.'
+  - var elements = 'Элементы: Композиции для фотозон, Press wall, Инсталляции, Качели, Гирлянды, Арка, Световые конструкции.'
+
+  - var page = {title: 'Фотозона', url: 'zone/photo', type: 'zone-page', class: 'page zone photo', content: {desc: description, decor: decor, elements: elements}, list: [], breadcrumbs: [{link: 'zone', name: 'Оформление зон'}], slider: {path: 'zone/photo/photo-', qnt: 7}, button: {text: 'Заказать оформление фотозоны'}, list2: []};
+
+
+  - page.list.push({title: 'Welcome', link: 'welcome'})
+  - page.list.push({title: 'Президиум', link: 'presidium'})
+  - page.list.push({title: 'Столы гостей', link: 'guest-tables'})
+  - page.list.push({title: 'Детский стол', link: 'kinder-table'})
+
+block content
+  +zone-page(page)

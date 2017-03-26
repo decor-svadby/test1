@@ -1,0 +1,21 @@
+extends ../../_layout
+
+block vars
+
+  - var description = 'На свадьбе – это спокойное и тихое место для отдыха от развлечений. Главное – комфорт и удобство (кресла, диваны, столики). Часто допускает возможность для уединения и общения,  бывает на свежем воздухе в отдельных шатрах.'
+  - var decor = 'Декор:  Обычно в стилистике и цветах свадьбы (хотя бы некоторые элементы). Если отдельное от общего помещения – может контрастировать с прочим декором.'
+  - var elements = 'Элементы: Grand декор, Драпировка тканями, Композиция на столы.'
+
+  - var page = {title: 'Лаунж-зона', url: 'zone/lounge', type: 'zone-page', class: 'page zone lounge', content: {desc: description, decor: decor, elements: elements}, list: [], breadcrumbs: [{link: 'zone', name: 'Оформление зон'}], slider: {path: 'zone/lounge/lounge-', qnt: 10}, button: {text: 'Заказать оформление лаунж-зоны'}, list2: []}
+
+  - page.list.push({title: 'Welcome', link: 'welcome'})
+  - page.list.push({title: 'Президиум', link: 'presidium'})
+  - page.list.push({title: 'Столы гостей', link: 'guest-tables'})
+  - page.list.push({title: 'Детский стол', link: 'kinder-table'})
+
+
+  - page.list2.push({title: 'Подвесной декор', link: 'element/hanging-decor'})
+  - page.list2.push({title: 'Grand декор', link: 'element/grand-decor'})
+
+block content
+  +zone-page(page)

@@ -1,0 +1,21 @@
+extends ../../_layout
+
+block vars
+
+  - var description = 'Если среди гостей есть дети, то лучше их объединить , подарив родителям возможность провести время отдельно,  а детям –  пообщаться с другими  детьми. Их всегда легче объединять, кормить (детское меню) и развлекать за отдельным столом.'
+  - var decor = 'С точки зрения декора детский стол перекликается с общей концепцией оформления, но добавляются милые и веселые «детские» элементы.'
+  - var elements = 'Элементы: Украшения стульев, Венки и браслеты.'
+
+  - var page = {title: 'Детский стол', url: 'zone/kinder-table', type: 'zone-page', class: 'page zone kinder-table', content: {desc: description, decor: decor, elements: elements}, list: [], breadcrumbs: [{link: 'zone', name: 'Оформление зон'}], slider: {path: 'zone/kinder-table/kinder-table-', qnt: 7}, button: {text: 'Заказать оформление детского стола'}, list2: []};
+
+  - page.list.push({title: 'Welcome', link: 'welcome'})
+  - page.list.push({title: 'Президиум', link: 'presidium'})
+  - page.list.push({title: 'Столы гостей', link: 'guest-tables'})
+  - page.list.push({title: 'Выездная регистрация', link: 'registration'})
+
+
+  - page.list2.push({title: 'Подвесной декор', link: 'element/hanging-decor'})
+  - page.list2.push({title: 'Grand декор', link: 'element/grand-decor'})
+
+block content
+  +zone-page(page)

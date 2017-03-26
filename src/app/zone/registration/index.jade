@@ -2,11 +2,12 @@ extends ../../_layout
 
 block vars
 
-  - var description = 'То, заветное место, куда жаждет попасть любая детская душа. Цирк. Аттракционы. Веселье.  Клоуны.</p><p>На этот вечер Ваша свадьба взорвется эмоциями радости добра и света.'
+  - var description = 'Основная (главная по смыслу) цель свадьбы – зарегистрировать  отношения, провести церемонию заключения брака. Сейчас, благодаря выездной регистрации,  есть возможность провести  официальную часть празднично, красиво и нестандартно, исключительно для Вас и Ваших гостей. Все будут чувствовать себя приятно и радостно. Все должно быть оформлено цельно, в единой стилистике и перекликаться с образами молодых. '
+  - var elements = 'Элементы: Арка, Дорожки из цветов, Украшение стульев, Grand декор'
 
-  - var page = {title: 'Фотозона', url: 'zone/photo', type: 'zone-page', class: 'page zone photo', content: {desc: description}, list: [], breadcrumbs: [{link: 'zone', name: 'Оформление зон'}], slider: {path: 'zone/registration/registration-', qnt: 7}, button: {text: 'Заказать оформление фотозоны'}, list2: []}
+  - var page = {title: 'Выездная регистрация', url: 'zone/registration', type: 'zone-page', class: 'page zone registration', content: {desc: description, elements: elements}, list: [], breadcrumbs: [{link: 'zone', name: 'Оформление зон'}], slider: {path: 'zone/registration/registration-', qnt: 10}, button: {text: 'Заказать оформление выездной регистрации'}, list2: []};
 
-  - page.list.push({title: 'Выездная регистрация', link: 'registration'})
+  - page.list.push({title: 'Welcome', link: 'welcome'})
   - page.list.push({title: 'Президиум', link: 'presidium'})
   - page.list.push({title: 'Столы гостей', link: 'guest-tables'})
   - page.list.push({title: 'Детский стол', link: 'kinder-table'})

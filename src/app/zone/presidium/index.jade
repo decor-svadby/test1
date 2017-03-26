@@ -1,0 +1,21 @@
+extends ../../_layout
+
+block vars
+
+  - var description = 'Стол молодоженов – это главный центр внимания гостей,  место, которое приковывает к себе все взгляды. Оно задает тон свадьбе, ее стилистике. Должно быть очень красивым и эффектным. На свадьбе – это основное место действия и обращения всех присутствующих.  Похоже на трон, тронное место во дворце.'
+  - var decor = 'С точки зрения декора должно быть выполнено в едином стиле (стол и задник). Создает ощущение единой картины или сцены, в которую погружаются молодые и которая украшает пару.'
+  - var elements = 'Элементы: Композиция на столы, Ниспадающие композиции, Press wall.'
+
+  - var page = {title: 'Президиум', url: 'zone/presidium', type: 'zone-page', class: 'page zone presidium', content: {desc: description, decor: decor, elements: elements}, list: [], breadcrumbs: [{link: 'zone', name: 'Оформление зон'}], slider: {path: 'zone/presidium/presidium-', qnt: 8}, button: {text: 'Заказать оформление президиума'}, list2: []}
+
+  - page.list.push({title: 'Welcome', link: 'welcome'})
+  - page.list.push({title: 'Выездная регистрация', link: 'registration'})
+  - page.list.push({title: 'Столы гостей', link: 'guest-tables'})
+  - page.list.push({title: 'Детский стол', link: 'kinder-table'})
+
+
+  - page.list2.push({title: 'Подвесной декор', link: 'element/hanging-decor'})
+  - page.list2.push({title: 'Grand декор', link: 'element/grand-decor'})
+
+block content
+  +zone-page(page)
