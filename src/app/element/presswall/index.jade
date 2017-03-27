@@ -1,0 +1,19 @@
+extends ../../_layout
+
+block vars
+
+  - var description = 'Единый, цельный массив цветочных композиций. Живое море цветов. Очень выигрышен для фото. Может быть обыгран ключевыми словами, инициалами молодых. В основном используется как фотозона. Возможно украшение регистрации или президиума для молодых. Стоимость от 20 000 рублей.'
+
+  - var page = {title: 'Presswall', url: 'element/presswall', type: 'element-page', class: 'page element presswall', content: {desc: description}, list: [], breadcrumbs: [{link: 'element', name: 'Элементы'}], slider: {path: 'element/presswall/presswall-', qnt: 9}, button: {text: 'Заказать оформление presswall'}, list2: []};
+
+  - page.list.push({title: 'Лестница', link: 'stairway'})
+  - page.list.push({title: 'Подвесной декор', link: 'hanging-decor'})
+  - page.list.push({title: 'Grand декор', link: 'grand-decor'})
+  - page.list.push({title: 'Дорожки из цветов', link: 'flower-path'})
+
+  - page.list2.push({title: 'Фотозона', url: 'zone/photo'})
+  - page.list2.push({title: 'Президиум', link: 'zone/presidium'})
+
+
+block content
+  +element-page(page)

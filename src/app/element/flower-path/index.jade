@@ -1,0 +1,19 @@
+extends ../../_layout
+
+block vars
+
+  - var description = 'Часто повторяющие одинаковые элементы, создающие ощущение коридора, дороги к дому, алтарю, семейному очагу. Обычно используются как составной элемент выездной регистрации, во входных зонах. Могут быть различных форм и сущностей: от разбросанных лепестков до составных напольных композиций. Иногда дополняются свечами, бантами, вазами, горшками. Стоимость от 800 рублей за метр.'
+
+  - var page = {title: 'Дорожки из цветов', url: 'element/flower-path', type: 'element-page', class: 'page element flower-path', content: {desc: description}, list: [], breadcrumbs: [{link: 'element', name: 'Элементы'}], slider: {path: 'element/flower-path/flower-path-', qnt: 18}, button: {text: 'Заказать оформление дорожек из цветов'}, list2: []};
+
+  - page.list.push({title: 'Лестница', link: 'stairway'})
+  - page.list.push({title: 'Арка', link: 'arc'})
+  - page.list.push({title: 'Подвесной декор', link: 'hanging-decor'})
+  - page.list.push({title: 'Grand декор', link: 'grand-decor'})
+
+  - page.list2.push({title: 'Фотозона', url: 'zone/photo'})
+  - page.list2.push({title: 'Президиум', link: 'zone/presidium'})
+
+
+block content
+  +element-page(page)

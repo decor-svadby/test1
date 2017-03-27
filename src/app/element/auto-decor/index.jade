@@ -1,0 +1,19 @@
+extends ../../_layout
+
+block vars
+
+  - var description = 'Свадебная классика: украшение свадебного эскорта - автомобиля, лимузина, кареты. Первая поездка молодых в статусе семьи, в новом статусе. Дорога в новую жизнь. Должно быть красиво обыгран свадебный кортеж, момент появления молодых к гостям. Украшением могут быть  сердца, цветы, ленты, ткань. Стоимость от 5 000 рублей.'
+
+  - var page = {title: 'Украшение авто', url: 'element/auto-decor', type: 'element-page', class: 'page element auto-decor', content: {desc: description}, list: [], breadcrumbs: [{link: 'element', name: 'Элементы'}], slider: {path: 'element/auto-decor/auto-decor-', qnt: 23}, button: {text: 'Заказать украшение авто'}, list2: []};
+
+  - page.list.push({title: 'Лестница', link: 'stairway'})
+  - page.list.push({title: 'Арка', link: 'arc'})
+  - page.list.push({title: 'Подвесной декор', link: 'hanging-decor'})
+  - page.list.push({title: 'Дорожки из цветов', link: 'flower-path'})
+
+  - page.list2.push({title: 'Фотозона', url: 'zone/photo'})
+  - page.list2.push({title: 'Президиум', link: 'zone/presidium'})
+
+
+block content
+  +element-page(page)

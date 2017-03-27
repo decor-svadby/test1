@@ -1,0 +1,19 @@
+extends ../../_layout
+
+block vars
+
+  - var description = 'Если в помещении для свадьбы есть лестница ее лучше украшать, так как это всегда красиво и стильно. Эффект восторга гостей и торжественности события будет обеспечен. Суть декора: симметрично повторяющие элементы, цветочные композиции, ткани или гирлянды. Стоимость от 1 500 рублей / метр.'
+
+  - var page = {title: 'Лестница', url: 'element/stairway', type: 'element-page', class: 'page element stairway', content: {desc: description}, list: [], breadcrumbs: [{link: 'element', name: 'Элементы'}], slider: {path: 'element/stairway/stairway-', qnt: 8}, button: {text: 'Заказать оформление лестницы'}, list2: []};
+
+  - page.list.push({title: 'Арка', link: 'arc'})
+  - page.list.push({title: 'Подвесной декор', link: 'hanging-decor'})
+  - page.list.push({title: 'Grand декор', link: 'grand-decor'})
+  - page.list.push({title: 'Дорожки из цветов', link: 'flower-path'})
+
+  - page.list2.push({title: 'Фотозона', url: 'zone/photo'})
+  - page.list2.push({title: 'Президиум', link: 'zone/presidium'})
+
+
+block content
+  +element-page(page)

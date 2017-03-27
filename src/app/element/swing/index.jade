@@ -1,0 +1,19 @@
+extends ../../_layout
+
+block vars
+
+  - var description = 'Качели символизируют  период ухаживания, романтики, влюбленности. Используются как must-have в некоторых стилях свадеб. Могут служить базой для декора (развешаны по помещению). Если позволяет нагрузка, всегда выигрышно смотрятся  как зона уединения или фотозона. В зависимости от размера –разные функциональные роли. Стоимость от 3 000 рублей.'
+
+  - var page = {title: 'Качели', url: 'element/swing', type: 'element-page', class: 'page element swing', content: {desc: description}, list: [], breadcrumbs: [{link: 'element', name: 'Элементы'}], slider: {path: 'element/swing/swing-', qnt: 8}, button: {text: 'Заказать оформление качелей'}, list2: []};
+
+  - page.list.push({title: 'Арка', link: 'arc'})
+  - page.list.push({title: 'Подвесной декор', link: 'hanging-decor'})
+  - page.list.push({title: 'Grand декор', link: 'grand-decor'})
+  - page.list.push({title: 'Дорожки из цветов', link: 'flower-path'})
+
+  - page.list2.push({title: 'Фотозона', url: 'zone/photo'})
+  - page.list2.push({title: 'Президиум', link: 'zone/presidium'})
+
+
+block content
+  +element-page(page)

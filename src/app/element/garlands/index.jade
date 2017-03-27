@@ -1,0 +1,19 @@
+extends ../../_layout
+
+block vars
+
+  - var description = 'В некоторых свадебных культурах – обязательный элемент декора, символ богатства, благополучия. В основном – цветочные гирлянды. Могут быть очень нарядными и необычными элементами для фотозон. Стоимость от 1 000 рублей / метр.'
+
+  - var page = {title: 'Гирлянды', url: 'element/garlands', type: 'element-page', class: 'page element garlands', content: {desc: description}, list: [], breadcrumbs: [{link: 'element', name: 'Элементы'}], slider: {path: 'element/garlands/garlands-', qnt: 16}, button: {text: 'Заказать оформление гирлянд'}, list2: []};
+
+  - page.list.push({title: 'Лестница', link: 'stairway'})
+  - page.list.push({title: 'Подвесной декор', link: 'hanging-decor'})
+  - page.list.push({title: 'Grand декор', link: 'grand-decor'})
+  - page.list.push({title: 'Дорожки из цветов', link: 'flower-path'})
+
+  - page.list2.push({title: 'Фотозона', url: 'zone/photo'})
+  - page.list2.push({title: 'Президиум', link: 'zone/presidium'})
+
+
+block content
+  +element-page(page)

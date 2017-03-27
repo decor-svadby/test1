@@ -113,7 +113,10 @@ mixin element-page(page)
                 img(src='/images/#{page.slider.path}#{i++}.jpg')
 
     .row
-      a(href="#").btn #{page.button.text}
+      center
+        a(href="#").btn #{page.button.text}
+        br
+        br
     .row
       +draw-list(page)
 
