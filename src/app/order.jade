@@ -1,0 +1,10 @@
+extends _layout
+
+block vars
+
+  - var txt = ''
+  - var page = {title: 'Заказать оформление', url: '', type: 'order', class: 'page order', content: {text: txt }};
+
+
+block content
+  +order-page(page)

@@ -6,6 +6,11 @@ mixin nav(page)
           a(href='/contact').link-contact Контакты
         .right
           a(href='/about').link-about О нас
+      when 'order'
+        .left.home
+          a(href='/').link-no-decor LeDecor
+        .right
+          a(href='/about').link-no-decor О нас
       when 'list'
       when 'page'
       default
@@ -92,7 +97,7 @@ mixin style-page(page)
         p !{page.content.must}
     .row
       center
-        a(href="#").btn Заказать оформление в стиле #{page.title}
+        a(href="/order").btn Заказать оформление в стиле #{page.title}
 
 mixin element-page(page)
   +nav(page)
@@ -114,7 +119,7 @@ mixin element-page(page)
 
     .row
       center
-        a(href="#").btn #{page.button.text}
+        a(href="/order").btn #{page.button.text}
         br
         br
     .row
@@ -142,7 +147,7 @@ mixin zone-page(page)
 
     .row
       center
-        a(href="#").btn #{page.button.text}
+        a(href="/order").btn #{page.button.text}
         br
         br
     .row
@@ -174,19 +179,19 @@ mixin color-page(page)
 
     .row
       center
-        a(href="#").btn Заказать оформление
+        a(href="/order").btn Заказать оформление
     .row
       +draw-list(page)
 
 
 mixin sendmail
     table
-      form        
           p 
-            input(type="text", name="addr", width=300, height=50, value="Ваш E-MAIL") 
+            input(type="text", name="addr", class="email", placeholder="Ваш e-mail") 
           p 
-            input(type="text", name="message", width=300, value="Ваше сообщение")
-          .btn Отправить
+            input(type="text", name="message", class="message", placeholder="Ваше сообщение" )
+          p    
+            a(href="#").btn Отправить
 
 mixin about-page(page)
   +nav(page)
@@ -208,6 +213,16 @@ mixin contact-page(page)
     .row
         +sendmail(page)
 
+mixin order-page(page)
+  +nav(page)
+  .container
+    h1: span #{page.title}
+    .row
+      .desc
+        p !{page.content.text}
+        .clearfix
+    .row
+        +sendmail(page)
 //- =============
 
 html(lang='en')
