@@ -35,7 +35,6 @@ mixin front-page(page)
   +nav(page)
   .row.first-page-title
     img(src='/images/logo-title.svg').logo-title
-    //.first-page-about: a(href='').link-no-decor О нас
   .container
     +draw-list(page)
 
@@ -75,9 +74,7 @@ mixin style-page(page)
   +nav(page)
   .container
     h1: span #{page.title}
-
-    .row.desc
-      p !{page.content.desc}
+    p !{page.content.desc}
     .clearfix
     h2 Варианты оформления в стиле #{page.title}:
     .col
@@ -87,7 +84,6 @@ mixin style-page(page)
          while i < page.slider.qnt + 1
           .slide
             img(src='/images/#{page.slider.path}#{i++}.jpg')
-
     .row
       .col
         h2: span Флористика 
@@ -189,9 +185,13 @@ mixin sendmail
     p
       input(type="email" class ="email" name="_replyto" placeholder="Ваш e-mail")
     p
+      input(type="name" class ="name" name="_name" placeholder="Ваше имя")
+    p
+      input(type="phone" class ="phone" name="_phone" placeholder="Ваш номер телефона")
+    p
       textarea(name="body" class="message" placeholder="Ваше сообщение")
     p
-      input(type="submit" value="Отправить")
+      input(type="submit" class="button" value="Отправить")
 
 
 mixin about-page(page)
