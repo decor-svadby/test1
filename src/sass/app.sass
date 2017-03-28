@@ -103,6 +103,15 @@ a, p, h1, h2, h3
   -o-transition:  $params
   transition:  $params
 
+@mixin placeholder
+  ::-webkit-input-placeholder 
+    @content
+  :-moz-placeholder           
+    @conten
+  ::-moz-placeholder          
+    @content
+  :-ms-input-placeholder      
+    @content
 
 .email
   width: 300
@@ -110,10 +119,8 @@ a, p, h1, h2, h3
   font-size: 14pt
   border-color: $color-pink
   border-top-style: double
-  -webkit-placeholder: 
-    color: $color-pink;
-
-  -moz-placeholder: { color: $color-pink; }
+  @include placeholder
+    color: $color-pink
 
 .message
   width: 300
@@ -122,8 +129,9 @@ a, p, h1, h2, h3
   border-color: $color-pink
   border-top-style: double
   vertical-align: top
-  -webkit-placeholder {color: $color-pink;}
-  -moz-placeholder {color: $color-pink;}
+  @include placeholder
+    color: $color-pink
+
 
 @import "./partials/shadow"
 @import "./partials/global"

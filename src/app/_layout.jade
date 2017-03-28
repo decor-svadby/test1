@@ -185,13 +185,12 @@ mixin color-page(page)
 
 
 mixin sendmail
-    table
-          p 
-            input(type="text", name="addr", class="email", placeholder="Ваш e-mail") 
-          p 
-            input(type="text", name="message", class="message", placeholder="Ваше сообщение" )
-          p    
-            a(href="#").btn Отправить
+      form(action="send_email.php", method="post")
+        p 
+          input(type="text", name="addr", class="email", placeholder="Ваш e-mail") 
+        p 
+          input(type="text", name="message", class="message", placeholder="Ваше сообщение" )
+        btn(class="submit" type="submit") Отправить
 
 mixin about-page(page)
   +nav(page)
@@ -249,4 +248,5 @@ head
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
     script(src='/jquery.bxslider.js')
     script(src='/app.min.js')
+    script(src='send_email.php')
 
