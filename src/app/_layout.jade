@@ -183,13 +183,13 @@ mixin color-page(page)
 mixin sendmail
   form(action="http://formspree.io/decor-svadby@mail.ru" method="post")
     p
-      input(type="email" class ="email" name="_replyto" placeholder="Ваш e-mail")
+      input(type="name" class ="name" name="_name" title="имя" placeholder="Ваше имя")
     p
-      input(type="name" class ="name" name="_name" placeholder="Ваше имя")
+      input(type="email" class ="email" name="_replyto" title="e-mail" placeholder="e-mail")
     p
-      input(type="phone" class ="phone" name="_phone" placeholder="Ваш номер телефона")
+      input(type="phone" class ="phone" name="_phone" title="телефон" placeholder="номер телефона")
     p
-      textarea(name="body" class="message" placeholder="Ваше сообщение")
+      textarea(name="body" class="message" placeholder="Cообщение")
     p
       input(type="submit" class="button" value="Отправить")
 
@@ -212,6 +212,7 @@ mixin contact-page(page)
         p !{page.content.text}
         .clearfix
     .row
+        p !{page.content.lbl}
         +sendmail(page)
 
 mixin order-page(page)
@@ -223,6 +224,7 @@ mixin order-page(page)
         p !{page.content.text}
         .clearfix
     .row
+        p !{page.content.lbl}
         +sendmail(page)
 //- =============
 
