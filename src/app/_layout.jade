@@ -31,13 +31,16 @@ mixin title(page)
 
 mixin front-page(page)
   .header-title
-    span Мы создадим <br> Вашу неповторимую свадьбу!
+    .left.heder-title
+    .center.header-title
+      span Мы создадим <br> Вашу неповторимую свадьбу!
+    .right.header-title
+      span Новогодний Декор
   +nav(page)
   .row.first-page-title
     img(src='/images/logo-title.svg').logo-title
   .container
     +draw-list(page)
-
 
 mixin list-page(page)
   if !page.nomenu
