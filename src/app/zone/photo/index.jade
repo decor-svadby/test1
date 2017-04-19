@@ -8,11 +8,11 @@ block vars
 
   - var page = {title: 'Фотозона', url: 'zone/photo', type: 'zone-page', class: 'page zone photo', content: {desc: description, decor: decor, elements: elements}, list: [], breadcrumbs: [{link: 'zone', name: 'Оформление зон'}], slider: {path: 'zone/photo/photo-', qnt: 11}, button: {text: 'Заказать оформление фотозоны'}, list2: []};
 
-
-  - page.list.push({title: 'Welcome', link: 'welcome'})
-  - page.list.push({title: 'Президиум', link: 'presidium'})
-  - page.list.push({title: 'Столы гостей', link: 'guest-tables'})
+  - page.list.push({title: 'Выездная регистрация', link: 'registration'})
   - page.list.push({title: 'Детский стол', link: 'kinder-table'})
+  - page.list.push({title: 'Танцпол', link: 'dance-floor'})
+  - page.list.push({title: 'Вынос торта', link: 'cake-takeaway'})
+
 
 block content
   +zone-page(page)
