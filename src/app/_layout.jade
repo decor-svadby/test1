@@ -35,7 +35,8 @@ mixin front-page(page)
     .center.header-title
       span Мы создадим <br> Вашу неповторимую свадьбу!
     .right.header-title
-      span Новогодний Декор
+      span 
+        a(href="http://decor-elki.ru") Мы создаём <br> новогодний декор!
   +nav(page)
   .row.first-page-title
     img(src='/images/logo-title.svg').logo-title
@@ -133,7 +134,15 @@ mixin zone-page(page)
         .desc
           p !{page.content.desc}
           p !{page.content.decor}
-          p !{page.content.elements}
+          
+          p Элементы: 
+            - var i = 0;
+            while i < page.list2.length
+              a(href="#{page.list2[i].link}") #{page.list2[i].title}
+              if ++i != page.list2.length
+                text=", " 
+              else 
+                text="."
         .clearfix
 
       .col

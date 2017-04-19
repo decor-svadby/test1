@@ -3,7 +3,7 @@ extends ../../_layout
 block vars
   - var description = 'Свадьба – одно из самых многолюдных мероприятий, поэтому столов гостей обычно много и их надо как – то объединить по стилю и цветовой колористике, иначе будет слишком обыденно и непразднично. Кроме общего смысла украшенный стол для гостей – это знак внимания к каждому пришедшему, способ  дать возможность провести время приятно, в дружественной и красивой атмосфере.'
   - var decor = ' '
-  - var elements = 'Элементы: Композиции на столы. Centerpiece, Канделябры,  Украшение стульев, Сервировка стола.'
+  - var elements = 'Элементы: Композиции на столы. Centerpiece, Канделябры, Украшение стульев, Сервировка стола.'
 
   - var page = {title: 'Столы гостей', url: 'zone/guest-tables', type: 'zone-page', class: 'page zone guest-tables', content: {desc: description, decor: decor, elements: elements}, list: [], breadcrumbs: [{link: 'zone', name: 'Оформление зон'}], slider: {path: 'zone/guest-tables/guest-tables-', qnt: 12}, button: {text: 'Заказать оформление столов гостей'}, list2: []};
 
@@ -13,8 +13,12 @@ block vars
   - page.list.push({title: 'Выездная регистрация', link: 'registration'})
 
 
-  - page.list2.push({title: 'Подвесной декор', link: 'element/hanging-decor'})
-  - page.list2.push({title: 'Grand декор', link: 'element/grand-decor'})
+  - page.list2.push({title: 'Композиции на столы', link: 'element/table-composition'})
+  - page.list2.push({title: 'Centerpiece', link: 'element/centerpiece'})
+  - page.list2.push({title: 'Канделябры', link: 'element/candelabra'})
+  - page.list2.push({title: 'Украшение стульев', link: 'element/chairs-decor'})
+  - page.list2.push({title: 'Сервировка стола', link: 'element/tableware'})
+
 
 block content
   +zone-page(page)
