@@ -14,7 +14,7 @@
         &:after
           +page_title_ico
           background: url('/images/style-subtitle-right.svg') no-repeat 0 0
-          right: 0
+          right: -20
   h2
     text-align: center
     span
@@ -31,6 +31,7 @@
           right: 0
   .desc
     text-align: center
+    background: url('/images/about-image.jpg') no-repeat 0 0
     +breakpoint(max-width $break-small)
       +span(12)
     +breakpoint(min-width $break-small)
@@ -39,7 +40,7 @@
     +breakpoint(min-width $break-medium)
       +span(4)
       +push(4)
-    background: url('/images/about-image.jpg') no-repeat 0 0
+    
 
   .row .col
     +breakpoint(max-width $break-small)
@@ -49,6 +50,8 @@
     +breakpoint(min-width $break-medium)
       +span(5)
       +push(1)
+    
+  img
+    height: 55%    
   p
     line-height: 1.5
-    background: url('/images/about-image.jpg') no-repeat 0 0
